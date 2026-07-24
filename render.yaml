@@ -1,0 +1,16 @@
+services:
+  - type: web_service
+    name: dims-store-backend
+    env: node
+    region: oregon
+    branch: main
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+
+databases:
+  - name: dims-store-db
+    plan: starter
+    region: oregon
+    disk: 10
